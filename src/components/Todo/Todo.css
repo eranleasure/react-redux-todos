@@ -1,0 +1,103 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  background: white;
+  margin: 0 0 0.5rem;
+  position: relative;
+}
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.todo--form {
+  display: flex;
+  width: 100%;
+}
+
+.todo--fields {
+  padding: 0.8rem 0.5rem;
+  margin-left: 2rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.todo--fields.editing {
+  margin-left: 0;
+}
+
+.todo--checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.todo--label,
+.todo--edit-title {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.todo--edit-title {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+.todo--label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 100%;
+  background: rgba(97, 218, 251, 0.3);
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.todo--label::after {
+  content: '';
+  height: 0.5rem;
+  width: 1rem;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 7px;
+  top: 14px;
+}
+
+.todo--checkbox:checked + .todo--label {
+  text-decoration: line-through;
+  color: silver;
+}
+.todo--checkbox:checked + .todo--label::before {
+  background: rgba(97, 218, 251, 1);
+}
+
+.todo--btn-group {
+  display: flex;
+}
+.todo--btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  padding: 0.75rem 0.5rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(32, 35, 42, 0.07);
+  transition: 0.2s all ease-in-out;
+}
+.todo--btn:hover {
+  background: rgba(32, 35, 42, 0.1);
+}
+.todo--btn-img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
