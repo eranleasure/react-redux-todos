@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import GitHubIcon from '../../assets/github.svg';
 
 import Header from '../Header/Header';
 import NewTodoForm from '../NewTodoForm/NewTodoForm';
@@ -14,6 +15,12 @@ const App = () => {
       <NewTodoForm />
       <TodoList />
       <Footer />
+      <a
+        href='https://github.com/eranleasure/react-redux-todos'
+        className='app--bottom-link'
+      >
+        <img src={GitHubIcon} alt='github' />
+      </a>
     </div>
   );
 };

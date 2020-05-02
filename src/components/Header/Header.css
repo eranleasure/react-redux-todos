@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-self: center;
+  margin: 1rem 0 2rem;
 }
 .header--logo {
   width: 2.8rem;
